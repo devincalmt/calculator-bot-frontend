@@ -1,0 +1,163 @@
+.msger {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 700px; /* Adjust the maximum width as needed */
+  border: var(--border);
+  border-radius: 20px;
+  background: white;
+  box-shadow: 0 15px 15px -5px rgba(0, 0, 0, 0.2);
+  background-color: white;
+  margin-bottom: 20px;
+}
+
+.msgerHeader {
+  display: flex;
+  padding: 10px;
+  color: var(--text-black);
+  border-bottom: 1px solid var(--text-secondary);
+}
+
+.msgerHeaderBack {
+  cursor: pointer;
+}
+
+.msgerHeaderTitle {
+  font-size: 18px;
+  margin: 8px 5px;
+  font-weight: 600;
+}
+
+.msgerChat {
+  flex: 1;
+  overflow-y: auto;
+  padding: 10px;
+  background-color: var(--text-off-white);
+
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #ddd;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #bdbdbd;
+  }
+}
+
+.msg {
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 10px;
+  white-space: pre-wrap;
+}
+
+.msg:last-of-type {
+  margin: 0;
+}
+
+.msgImg {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  background: #ddd;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 50%;
+}
+
+.msgBubble {
+  max-width: 450px;
+  border-radius: 15px;
+  background: var(--left-msg-bg);
+  padding: 10px;
+  margin-left: 10px;
+}
+
+.msgInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.msgInfoName {
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.msgInfoTime {
+  font-size: 12px;
+}
+
+.msgText {
+  font-size: 14px;
+}
+
+.leftMsg {
+  .msgInfoTime {
+    color: var(--text-disabled);
+  }
+
+  .msgBubble {
+    border-bottom-left-radius: 0;
+  }
+
+  .msgText {
+    color: var(--text-black);
+  }
+}
+
+.rightMsg {
+  flex-direction: row-reverse;
+
+  .msgBubble {
+    background: var(--blue-color);
+    color: white;
+    border-bottom-right-radius: 0;
+  }
+
+  .msgImg {
+    margin: 0 0 0 10px;
+  }
+}
+
+.msgerInputArea {
+  display: flex;
+  padding: 10px 20px 20px 20px;
+  border-top: var(--border);
+
+  * {
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    font-size: 1em;
+  }
+}
+
+.msgerInput {
+  flex: 1;
+  background: var(--text-off-white);
+  outline: none;
+  border-radius: 10px;
+}
+
+.msgerSendBtn {
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  padding-right: 0px;
+}
+
+.msgerChat {
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+.msgInfoName {
+  font-weight: bold;
+}
