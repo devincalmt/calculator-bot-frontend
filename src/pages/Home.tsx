@@ -8,9 +8,9 @@ const Home = () => {
 
   const handleEmailSubmit = async () => {
     await login(email).then((userId) => {
-    sessionStorage.setItem("userID", userId);
-    navigate("/chat");
-    })
+      sessionStorage.setItem("userID", userId);
+      navigate("/chat");
+    });
   };
 
   return (
